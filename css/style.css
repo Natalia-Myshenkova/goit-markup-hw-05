@@ -551,7 +551,6 @@ address {
 .subscribe-block {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   color: #fff;
 }
 
@@ -563,13 +562,14 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
 }
 
 
 .subscribe-form {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 24px;
   flex-wrap: wrap; 
 }
 
@@ -580,12 +580,14 @@ address {
   width: 264px;
   height: 40px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background-color: #2e2f42;
+  background-color: transparent;
   color: #fff;
 }
 
@@ -609,14 +611,14 @@ address {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 16px;
   background-color: #4d5ae5;
   border-radius: 4px;
   padding-block: 8px;
   padding-inline: 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   border: none;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -639,6 +641,7 @@ address {
 .subscribe-icon {
   fill: #fff;
   flex-shrink: 0;
+  margin-left: 16px;
 }
 
 
@@ -657,7 +660,8 @@ address {
   opacity: 0;
 
   pointer-events: none;
-  transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal-overlay.is-open {
@@ -666,7 +670,9 @@ address {
 }
 
 .modal {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 
@@ -674,8 +680,9 @@ address {
   0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   max-width: 408px;
-  max-height: 90%;
+  min-height: 584px;
   overflow-y: auto;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -687,12 +694,12 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #e7e9fc;             
   border: 1px solid rgba(0, 0, 0, 0.1);    
   padding: 0;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 10;
 }
 
@@ -702,12 +709,14 @@ address {
   fill: #2e2f42; 
   transition: fill 250ms ease;
   pointer-events: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404bbf;       
-  border-color: #404bbf;           
+  border-color: #404bbf; 
+  border: none;           
 }
 
 .modal-close-btn:hover .modal-close-icon,
@@ -743,14 +752,13 @@ address {
 
 
 .form-label {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: block;
+  margin-bottom: 4px;
   margin: 0;
   font-weight: 400;
   font-size: 12px;
   
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -763,6 +771,7 @@ address {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin-bottom: 8px; 
 }
 
 .modal-form-input {

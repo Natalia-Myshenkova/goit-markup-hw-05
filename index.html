@@ -403,13 +403,15 @@
 
 
 <div class="subscribe-block">
-  <div class="subscribe-title">Subscribe</div>
+  <p class="subscribe-title">Subscribe</p>
 
   <form class="subscribe-form" action="#" novalidate>
 
-    <label class="visually-hidden" for="email">E-mail</label>
+    <label class="visually-hidden" for="email">E-mail
 
     <input id="email" class="form-input" type="email" name="email" placeholder="E-mail" required />
+
+  </label>
 
     <button type="submit" class="subscribe-btn">
       Subscribe
@@ -428,26 +430,26 @@
   <div class="modal-overlay">
     <div class="modal">
       <button class="modal-close-btn" type="button" aria-label="Close modal">
-        <svg class="modal-close-icon" width="12" height="12" aria-hidden="true" focusable="false">
+        <svg class="modal-close-icon" width="8" height="8" aria-hidden="true" focusable="false">
           <use href="./images/icons.svg#icon-close-modal"></use>
         </svg>
       </button>
   
-      <div class="modal-title">Leave your contacts and we will call you back</div>
+      <p class="modal-title">Leave your contacts and we will call you back</p>
   
       <form class="contacts-form">
   
         <!-- Name -->
         <div class="form-input-wrapper">
-          <label class="form-label" for="user_name">Name</label>
+          <label class="form-label" for="user-name">Name</label>
           <input
-            id="user_name"
+            id="user-name" 
             class="modal-form-input"
             type="text"
-            name="user_name"
+            name="user-name"
             required
           >
-          <svg class="form-icon" width="18" height="18" aria-hidden="true">
+          <svg class="form-icon" width="18" height="24" aria-hidden="true">
             <use href="./images/icons.svg#icon-name-modal"></use>
           </svg>
         </div>
@@ -462,7 +464,7 @@
             name="user_phone"
             required
           >
-          <svg class="form-icon" width="18" height="18" aria-hidden="true">
+          <svg class="form-icon" width="18" height="24" aria-hidden="true">
             <use href="./images/icons.svg#icon-phone-modal"></use>
           </svg>
         </div>
@@ -477,7 +479,7 @@
             name="user_email"
             required
           >
-          <svg class="form-icon" width="18" height="18" aria-hidden="true">
+          <svg class="form-icon" width="18" height="24" aria-hidden="true">
             <use href="./images/icons.svg#icon-email-modal"></use>
           </svg>
         </div>
