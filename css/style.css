@@ -979,6 +979,6 @@ address {
   background-color: #404bbf;
 }
 
-span.checkbox-custom {
+.checkbox-custom {
   display: inline-flex;
 }
