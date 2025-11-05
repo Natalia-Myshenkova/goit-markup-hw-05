@@ -3,6 +3,7 @@
   --primary: #4d5ae5;
   --hover: #31d0aa;
   --icon-color: #f4f4fd;
+
 }
 
 *,
@@ -910,7 +911,14 @@ address {
 
 .checkbox-input:checked + .checkbox-label .checkbox-custom {
   background-color: #404bbf;
-  border-color: #404bbf;
+  border: none; 
+  fill: #F4F4FD;
+}
+
+.checkbox-input:checked + .checkbox-label .checkbox-custom {
+  background-color: #404bbf;
+  border: none;
+  fill: #F4F4FD;
 }
 
 
@@ -941,7 +949,7 @@ address {
   line-height: 1.3333;
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  color: #4d5ae5;
+  color: var(--primary);
 }
 
 .policy-link:hover,
