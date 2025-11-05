@@ -850,9 +850,9 @@ address {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  cursor: pointer;
   user-select: none;
   margin-bottom: 24px;
+  position: relative; 
 }
 
 .checkbox-input {
@@ -867,6 +867,18 @@ address {
   border: 0;
   white-space: nowrap;
 }
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color:#8e8f99;
+  cursor: pointer;
+}
+
 
 /* Кастомний квадрат */
 .checkbox-custom {
@@ -895,18 +907,18 @@ address {
   pointer-events: none;
 }
 
-.checkbox-input:checked + .checkbox-custom {
+.checkbox-input:checked + .checkbox-label .checkbox-custom {
   background-color: #404bbf;
   border-color: #404bbf;
 }
 
 
-.checkbox-input:checked + .checkbox-custom .checkbox-icon {
+.checkbox-input:checked + .checkbox-label .checkbox-icon {
   opacity: 1;
 }
 
 
-.checkbox-input:focus-visible + .checkbox-custom {
+.checkbox-input:focus-visible + .checkbox-label .checkbox-custom {
   box-shadow: 0 0 0 3px rgba(64, 75, 191, 0.18);
   border-color: #404bbf;
   outline: none;
@@ -922,9 +934,6 @@ address {
   line-height: 1.1667;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  position: relative;
-  z-index: 1;
-
 }
 
 .policy-link {
