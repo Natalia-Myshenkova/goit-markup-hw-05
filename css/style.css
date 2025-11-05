@@ -894,9 +894,7 @@ address {
   background-color: #fff;
   flex-shrink: 0;
   box-shadow: 0 0 0 3px transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
  /*  color: #F4F4FD;  */
   fill: transparent;
 }
@@ -979,4 +977,8 @@ address {
 .modal-btn:hover,
 .modal-btn:active {
   background-color: #404bbf;
+}
+
+span.checkbox-custom {
+  display: inline-flex;
 }
