@@ -871,7 +871,7 @@ address {
 }
 
 .checkbox-label {
-  display: inline-flex;
+  /* display: inline-flex;*/
   align-items: center;
   gap: 8px;
   font-size: 12px;
@@ -948,11 +948,6 @@ address {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: var(--primary);
-}
-
-.policy-link:hover,
-.policy-link:focus {
-  color: #404bbf;
 }
 
 .modal-btn {
